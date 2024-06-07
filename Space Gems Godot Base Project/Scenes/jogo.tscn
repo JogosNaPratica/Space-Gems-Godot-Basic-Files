@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://bg8tqnuwe00og"]
+
+[ext_resource type="Texture2D" uid="uid://c48gjfo21hi36" path="res://Assets/imagens/texturas/imagem_de_fundo.png" id="1_j6fij"]
+[ext_resource type="Texture2D" uid="uid://4t52tjmwwdsu" path="res://Assets/imagens/texturas/imagem_da_caverna.png" id="2_a80aa"]
+[ext_resource type="Texture2D" uid="uid://vvvuwwtsxhi1" path="res://Assets/imagens/texturas/imagem_das_pedras.png" id="3_6jncr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7jjvq"]
+size = Vector2(1919, 94)
+
+[node name="Jogo" type="Node2D"]
+
+[node name="ImagemDeFundo" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("1_j6fij")
+
+[node name="ImagemDaCaverna" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("2_a80aa")
+
+[node name="ImagemDasPedras" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("3_6jncr")
+
+[node name="Chao" type="StaticBody2D" parent="."]
+
+[node name="ColisorDoChao" type="CollisionShape2D" parent="Chao"]
+position = Vector2(960, 1032)
+shape = SubResource("RectangleShape2D_7jjvq")
